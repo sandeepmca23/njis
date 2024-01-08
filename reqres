@@ -1,0 +1,82 @@
+ login
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+request :
+
+{"userName":"test","jsessionid":"1704710930607@566"}
+
+case 1 : response : 
+
+{
+  "status": 1,
+  "errormsg": "Invalid UserName",
+  "jsessionid": "1704711040896@637"
+}
+
+case 2 :response : 
+
+{
+  "status":0,
+  "userName": "test",
+  "authType": "MFA",
+  "totac": "777777",
+  "authToken": "dsfdsfasdfadf8887877sdf",
+  "callerIdSeq": "88877887",
+  "callerEmail": "dfadsd@gmail.com",
+  "jsessionid":"1704711040896@637"
+}
+
+
+                          VarificationUser
+						  request :
+						  +++++++++++++++++++
+						  
+						  {"userName":"test","password":"test","totac":"12345","jsessionid":"1704711347086@782"}
+						  
+						  case 1 :response :
+						  
+							  {
+							  "status":1,
+							 "errormsg": "Invalid Credentials ",
+							 "jsessionid":"1704711347086@782"
+							 }
+							 
+						  case 2 :response :
+						   
+								{
+								"status":0,
+								"errormsg": "",
+								"jsessionid":"1704711347086@782"
+								}
+						   
+						  
+
+
+case 2 :response : 
+
+{
+  "status":0,
+  "userName": "test",
+  "authType": "PWL",
+  "totac": "777777",
+  "authToken": "dsfdsfasdfadf8887877sdf",
+  "callerIdSeq": "88877887",
+  "callerEmail": "dfadsd@gmail.com",
+  "jsessionid":"1704711347086@782"
+}
+
+
+case 1 :response :
+						  
+							  {
+							  "status":1,
+							 "errormsg": "Invalid Credentials ",
+							 "jsessionid":"1704711347086@782"
+							 }
+							 
+						  case 2 :response :
+						   
+								{
+								"status":0,
+								"errormsg": "",
+								"jsessionid":"1704711347086@782"
+								}
